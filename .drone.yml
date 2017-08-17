@@ -1,6 +1,6 @@
 workspace:
-  base: /go
-  path: src/github.com/appleboy/detect
+  base: /go/src
+  path: github.com/appleboy/detect
 
 pipeline:
   build:
