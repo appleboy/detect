@@ -1,7 +1,6 @@
 package detect
 
 import (
-	"fmt"
 	"regexp"
 )
 
