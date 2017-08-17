@@ -12,6 +12,15 @@ pipeline:
       - make lint
       - make test
 
+  codecov:
+    image: robertstettner/drone-codecov
+    secrets: [ codecov_token ]
+    files:
+      - coverage.txt
+    when:
+      event: [ push, pull_request ]
+      status: [ success ]
+
   facebook:
     image: appleboy/drone-facebook
     pull: true
