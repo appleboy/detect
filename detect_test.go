@@ -13,4 +13,9 @@ func TestSetPlatform(t *testing.T) {
 	get := u.setPlatform()
 	assert.True(t, get)
 	assert.Equal(t, "Mac OS X", u.PlatForm)
+
+	u.Agent = "test"
+	get = u.setPlatform()
+	assert.False(t, get)
+	assert.Equal(t, "Unknown Platform", u.PlatForm)
 }
