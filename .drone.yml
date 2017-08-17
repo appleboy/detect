@@ -1,0 +1,21 @@
+workspace:
+  base: /go
+  path: src/github.com/appleboy/detect
+
+pipeline:
+  build:
+    image: appleboy/golang-testing
+    commands:
+      - make test-vendor
+      - make embedmd
+      - make vet
+      - make lint
+      - make test
+
+  facebook:
+    image: appleboy/drone-facebook
+    pull: true
+    to: 1234973386524610
+    secrets: [ fb_page_token, fb_verify_token ]
+    when:
+      status: [ changed, failure ]

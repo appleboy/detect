@@ -26,9 +26,7 @@ func New(agent string) *UserAgent {
 }
 
 func (u *UserAgent) setPlatform() bool {
-	fmt.Println(u.Agent)
 	for k, v := range PlatForms {
-
 		match := regexp.MustCompile(`(?i)` + k)
 		platformMatch := match.FindString(u.Agent)
 		if len(platformMatch) > 0 {
