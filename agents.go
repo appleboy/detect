@@ -1,6 +1,6 @@
 package detect
 
-const (
+var (
 	// PlatForms for user agent
 	PlatForms = map[string]string{
 		"windows nt 10.0": "Windows 10",
