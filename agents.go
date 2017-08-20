@@ -1,6 +1,52 @@
 package detect
 
 var (
+	// PlatFormKeys is platform keys
+	PlatFormKeys = map[int]string{
+		0:  "windows nt 10.0",
+		1:  "windows nt 6.3",
+		2:  "windows nt 6.2",
+		3:  "windows nt 6.1",
+		4:  "windows nt 6.0",
+		5:  "windows nt 5.2",
+		6:  "windows nt 5.1",
+		7:  "windows nt 5.0",
+		8:  "windows nt 4.0",
+		9:  "winnt4.0",
+		10: "winnt 4.0",
+		11: "winnt",
+		12: "windows 98",
+		13: "win98",
+		14: "windows 95",
+		15: "win95",
+		16: "windows phone",
+		17: "windows",
+		18: "android",
+		19: "blackberry",
+		20: "iphone",
+		21: "ipad",
+		22: "ipod",
+		23: "os x",
+		24: "ppc mac",
+		25: "freebsd",
+		26: "ppc",
+		27: "linux",
+		28: "debian",
+		29: "sunos",
+		30: "beos",
+		31: "apachebench",
+		32: "aix",
+		33: "irix",
+		34: "osf",
+		35: "hp-ux",
+		36: "netbsd",
+		37: "bsdi",
+		38: "openbsd",
+		39: "gnu",
+		40: "unix",
+		41: "symbian",
+	}
+
 	// PlatForms for user agent
 	PlatForms = map[string]string{
 		"windows nt 10.0": "Windows 10",

@@ -25,11 +25,11 @@ func New(agent string) *UserAgent {
 }
 
 func (u *UserAgent) setPlatform() bool {
-	for k, v := range PlatForms {
-		match := regexp.MustCompile(`(?i)` + k)
+	for i := 0; i < len(PlatForms); i++ {
+		match := regexp.MustCompile(`(?i)` + PlatFormKeys[i])
 		platformMatch := match.FindString(u.Agent)
 		if len(platformMatch) > 0 {
-			u.PlatForm = v
+			u.PlatForm = PlatForms[PlatFormKeys[i]]
 			return true
 		}
 	}
